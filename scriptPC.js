@@ -139,6 +139,7 @@ let sectionFiltroVagas = document.querySelector('.main-cont')
 let opcaoCandidaturas = document.querySelector('.opcao-candidaturas');
 let opcaoCurriculo = document.querySelector('.opcao-curriculo');
 let curriculoDesc = document.querySelector('.curriculo-desc');
+let candidaturasDesc = document.querySelector('.candidaturas-desc')
 let btnVoltar = document.querySelector('.opcao-voltar')
 
 btnVoltar.addEventListener('click', function(){
@@ -150,24 +151,23 @@ btnPerfil.addEventListener('click', function () {
     sectionFiltroVagas.classList.add('hidden');
     sectionPerfil.classList.remove('hidden');
 
-    // Adiciona sublinhado na opção de candidaturas
     opcaoCandidaturas.classList.add('opcao-selecionada');
     opcaoCurriculo.classList.remove('opcao-selecionada');
     curriculoDesc.classList.add('hidden');
 });
 
 opcaoCandidaturas.addEventListener('click', function () {
-    // Adiciona sublinhado na opção de candidaturas
     opcaoCandidaturas.classList.add('opcao-selecionada');
     opcaoCurriculo.classList.remove('opcao-selecionada');
     curriculoDesc.classList.add('hidden');
+    candidaturasDesc.classList.remove('hidden')
 });
 
 opcaoCurriculo.addEventListener('click', function () {
-    // Adiciona sublinhado na opção de currículo
     opcaoCurriculo.classList.add('opcao-selecionada');
     opcaoCandidaturas.classList.remove('opcao-selecionada');
     curriculoDesc.classList.remove('hidden');
+    candidaturasDesc.classList.add('hidden')
 });
 
 
