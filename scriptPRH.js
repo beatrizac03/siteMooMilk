@@ -1,3 +1,30 @@
+/* LOGIN RH */
+
+document.addEventListener('DOMContentLoaded', function(){
+    let btnEntrar = document.querySelector('.btnEntrar')
+
+    btnEntrar.addEventListener('click', function() {
+        let userLogin = document.querySelector('.userLogin').value
+        let idLogin = document.querySelector('.idLogin').value
+        let senhaLogin = document.querySelector('.senhaLogin').value
+        let respLogin = document.querySelector('.respostaLogin') 
+        let loginEfetuado = userLogin === 'rh' && senhaLogin === 'moomilk' && idLogin === '123456'
+    
+        if(userLogin === '' || senhaLogin === '' || idLogin === ''){
+            respLogin.innerHTML = 'Preencha todos os campos!'
+        } else {
+            if (loginEfetuado){
+                window.location.href = 'portalRH.html'
+            }
+            else {
+                respLogin.innerHTML = 'Senha ou usuário incorretos. Tente novamente'
+            }
+        }
+    })
+})
+
+
+
 /*  MEU PERFIL */
 
 let btnPerfil = document.querySelector('.foto-perfil')
