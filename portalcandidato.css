@@ -15,14 +15,14 @@ body{
     gap: 1.5rem;
     font-family: 'Poppins';
     overflow-x: hidden;
-    height: 85rem;
+    height: auto;
 }
 
 /* CABEÇALHO COM MEU PERFIL E SINO DE NOTIF*/
 
 .opcoes{
     width: 100vw;
-    height: 15vh;
+    height: 10vh;
     background-color: #2490e8;
     display: flex;
     align-items: center;
@@ -218,7 +218,7 @@ body{
 
 .lado-direito{
     width: 75vw;
-    height: auto;
+    height: 125vh;
     display: flex;
     flex-direction: column;
     background-color: #2490e8;
@@ -545,7 +545,57 @@ body{
     border-bottom: 2px solid #3498db;
 }
 
-
+/* MEDIA QUERY */
+@media only screen and (max-width: 768px){
+    .foto-perfil{
+        width: 40%;
+    }
+    .opcao-voltar{
+        width: 20%;
+    }
+    .main-cont{
+        padding: 1rem;
+        gap: 1rem;
+    }
+    #section-filtro{
+        width: 29vw;
+        height: 20vh;
+    }
+    .div-filtro{
+        width: 100%;
+        transform: scale(0.4);
+        height: auto;
+    }
+    .opcoes-lista button{
+        width: 100%;
+    }
+    .vagas{
+        gap: 1.5rem;
+        justify-content: space-around;
+    }
+    #resultado-vagas{
+        width: 100%;
+    }
+    .itens-vagas{
+        width: 40%;
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: auto;
+    }
+    .itens-vagas button{
+        width: 70%;
+        font-size: 1rem;
+    }
+    .vaga-content p, .vaga-content li{
+        font-size: 0.8rem;
+    }
+    .enviar-curric button{
+        width: 80%;
+    }
+    .detalhes-vaga{
+        height: 32vh;
+    }
+}
 
 
 
