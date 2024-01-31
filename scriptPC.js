@@ -116,20 +116,6 @@ opcaoRH.addEventListener('click', function(){
     });
 })
 
-
-/*  MEU PERFIL */
-
-let btnPerfil = document.querySelector('.foto-perfil')
-let filtroVagas = document.querySelector('.main-cont')
-
-btnPerfil.addEventListener('click', function() {
-    filtroVagas.classList.add('hidden')
-
-})
-
-let opcaoCandidaturas = document.querySelector('.opcao-candidaturas')
-let opcaoCurriculo = document.querySelector('.opcao-curriculo')
-
     // sino de notificações
 
     let sinoNotif = document.querySelector('.sino-notif')
@@ -145,7 +131,44 @@ let opcaoCurriculo = document.querySelector('.opcao-curriculo')
         msgNotif.style.fontSize = '1.2rem'
     })
 
+/*  MEU PERFIL */
 
+let btnPerfil = document.querySelector('.foto-perfil')
+let sectionPerfil = document.querySelector('.descricao-perfil')
+let sectionFiltroVagas = document.querySelector('.main-cont')
+let opcaoCandidaturas = document.querySelector('.opcao-candidaturas');
+let opcaoCurriculo = document.querySelector('.opcao-curriculo');
+let curriculoDesc = document.querySelector('.curriculo-desc');
+let btnVoltar = document.querySelector('.opcao-voltar')
+
+btnVoltar.addEventListener('click', function(){
+    sectionPerfil.classList.add('hidden')
+    sectionFiltroVagas.classList.remove('hidden')
+})
+
+btnPerfil.addEventListener('click', function () {
+    sectionFiltroVagas.classList.add('hidden');
+    sectionPerfil.classList.remove('hidden');
+
+    // Adiciona sublinhado na opção de candidaturas
+    opcaoCandidaturas.classList.add('opcao-selecionada');
+    opcaoCurriculo.classList.remove('opcao-selecionada');
+    curriculoDesc.classList.add('hidden');
+});
+
+opcaoCandidaturas.addEventListener('click', function () {
+    // Adiciona sublinhado na opção de candidaturas
+    opcaoCandidaturas.classList.add('opcao-selecionada');
+    opcaoCurriculo.classList.remove('opcao-selecionada');
+    curriculoDesc.classList.add('hidden');
+});
+
+opcaoCurriculo.addEventListener('click', function () {
+    // Adiciona sublinhado na opção de currículo
+    opcaoCurriculo.classList.add('opcao-selecionada');
+    opcaoCandidaturas.classList.remove('opcao-selecionada');
+    curriculoDesc.classList.remove('hidden');
+});
 
 
 
