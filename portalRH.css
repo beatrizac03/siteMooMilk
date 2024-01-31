@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    height: 85rem;
+}
+
+/* CABEÇALHO COM MEU PERFIL E SINO DE NOTIF*/
+
+.opcoes{
+    width: 100vw;
+    height: 11vh;
+    background-color: #2490e8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    gap: 3rem;
+}
+
+.foto-perfil{
+    width: 11%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 2rem;
+    transition: 0.3s transform ease-in-out;
+}
+
+.foto-perfil img{
+    width: 15%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.foto-perfil span{
+    font-size: 1.5rem;
+}
+
+.foto-perfil:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 2px 2px 15px 3px rgb(209, 208, 208);
+}
+
+.sino-notif{
+    font-size: 2rem;
+}
+
+.sino-notif:hover{
+    cursor: pointer;
+}
+
+.msg-notif{
+    width: 20rem;
+    height: 20rem;
+    background-color: white;
+    position: absolute;
+    top: 6.5rem;
+    border-radius: 2rem;
+    border-top-right-radius: -30rem;
+    border-width: 0 0 50px 50px;
+    border: 3px #2490e8 solid;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.msg-notif::before {
+    content: '';
+    position: absolute;
+    top: -1.8rem;
+    right: 1rem;
+    width: 20px; /* Ajuste conforme necessário para a largura do relevo */
+    height: 20px; /* Ajuste conforme necessário para a altura do relevo */
+    background-color: white;
+    border-top-left-radius: 2rem;
+    border: 3px #2490e8 solid;
+    border-bottom: 0;
+    transform: rotateZ(15deg);
+  }
+
+  .msg-notif-1{
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    border-radius: 2rem;
+  }
+
+  .msg-notif-2, .msg-notif-3, .msg-notif-4{
+    display: flex;
+    flex-direction: column;
+    border-top: 0.2px solid black;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+
+/* CONTEÚDO RESTANTE DA PÁGINA*/
+
+.cont-pag{
+    width: 100vw;
+    height: 80rem;
+    background-color: r;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cont-pag--1{
+    width: 90%;
+    height: 95%;
+    background-color: #2490e8;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.text-pag--1{
+    font-size: 2rem;
+}
+
+/* BOTAO DE CADASTRAR VAGA */
+.adcvagas-pag{
+    background-color: white;
+    width: 15%;
+    height: 3rem;
+    font-size: 1.8rem;
+    border-radius: 0.6rem;
+    transition: 0.2s transform ease-in-out;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.adcvagas-pag:hover{
+    transform: scale(1.06);
+    cursor: pointer;
+}
+
+.vagasicon-pag{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* CADASTRO DE NOVA VAGA */
+
+.novavaga-cadastro{
+    background-color: rgb(209, 208, 208);
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    border-radius: 2rem;
+    top: 7rem;
+    padding: 2rem;
+}
+
+.inputscadastro-vaga{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cadastroinput{
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastroinput input{
+    width: 70%;
+}
+
+.cont-cadastrovaga{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.cont-cadastrovaga h2{
+    font-size: 3.5rem;
+}
+
+.cont-cadastrovaga span{
+    font-size: 1.6rem;
+}
+
+.cont-cadastrovaga button{
+    width: 50%;
+    height: 3.2rem;
+    font-family: 'Poppins';
+    border-radius: 1rem;
+    border-color: #2490e8;
+}
+
+.cont-cadastrovaga button:hover{
+    cursor: pointer;
+}
+
+.cont-cadastrovaga input{
+    height: 2.5rem;
+}
+
+.textcadastrovaga{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fecharCadastro{
+    height: 50%;
+    width: 3%;
+    background-color: #2490e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.fecharCadastro i{
+    font-size: 2rem;
+}
+
+.fecharCadastro:hover{
+    cursor: pointer;
+}
+
+.desc-NovaVaga{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins';
+}
+
+body{
+    background-color: #2490e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricao{
+    width: 70vw;
+    height: 90vh;
+    background-color: white;
+    margin-top: 5rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    width: 85%;
+    font-size: 1.8rem;
+    padding-top: 2rem;
+}
+
+.azul{
+    color: #2490e8;
+}
+
+.sec-2{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sec-2 ul{
+    padding-left: 3rem;
+}
