@@ -99,6 +99,16 @@ ul a {
     margin: 0 auto;
 }
 
+.show{
+    display: block;
+}
+
+select {
+    background-color: #2490e8;
+    border: none;
+    color: white;
+}
+
 
 
 
