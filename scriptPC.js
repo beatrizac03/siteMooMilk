@@ -22,6 +22,27 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 })
 
+// FUNÇÃO ESCONDER E MOSTRAR
+function esconderItens() {
+    itensVaga.forEach(function(item) {
+        item.classList.add('hidden');
+    });
+}
+
+function mostrarItens() {
+    itensVaga.forEach(function(item) {
+        item.classList.remove('hidden');
+    });
+}
+
+function adicionaHiddenClass(item){
+    item.classList.add('hidden')
+}
+
+function removeHiddenClass(item){
+    item.classList.remove('hidden')
+}
+
 
 // FILTRO DE VAGAS
 
@@ -49,17 +70,7 @@ const btnCandidatar = document.querySelector('.botaoCandidatar')
 const telaVaga = document.querySelector('.detalhes-vaga')
 const btnFechar = document.querySelector('.btnFechar')
 
-function esconderItens() {
-    itensVaga.forEach(function(item) {
-        item.classList.add('hidden');
-    });
-}
 
-function mostrarItens() {
-    itensVaga.forEach(function(item) {
-        item.classList.remove('hidden');
-    });
-}
 
 btnCandidatar.addEventListener('click', function(){
     telaVaga.classList.remove('hidden')
@@ -143,31 +154,34 @@ let candidaturasDesc = document.querySelector('.candidaturas-desc')
 let btnVoltar = document.querySelector('.opcao-voltar')
 
 btnVoltar.addEventListener('click', function(){
-    sectionPerfil.classList.add('hidden')
-    sectionFiltroVagas.classList.remove('hidden')
+    adicionaHiddenClass(sectionPerfil)
+    removeHiddenClass(sectionFiltroVagas)
 })
 
 btnPerfil.addEventListener('click', function () {
-    sectionFiltroVagas.classList.add('hidden');
-    sectionPerfil.classList.remove('hidden');
+    adicionaHiddenClass(sectionFiltroVagas)
+    removeHiddenClass(sectionPerfil)
 
     opcaoCandidaturas.classList.add('opcao-selecionada');
     opcaoCurriculo.classList.remove('opcao-selecionada');
-    curriculoDesc.classList.add('hidden');
+
+    adicionaHiddenClass(curriculoDesc)
 });
 
 opcaoCandidaturas.addEventListener('click', function () {
     opcaoCandidaturas.classList.add('opcao-selecionada');
     opcaoCurriculo.classList.remove('opcao-selecionada');
-    curriculoDesc.classList.add('hidden');
-    candidaturasDesc.classList.remove('hidden')
+
+    removeHiddenClass(candidaturasDesc)
+    adicionaHiddenClass(curriculoDesc)
 });
 
 opcaoCurriculo.addEventListener('click', function () {
     opcaoCurriculo.classList.add('opcao-selecionada');
     opcaoCandidaturas.classList.remove('opcao-selecionada');
-    curriculoDesc.classList.remove('hidden');
-    candidaturasDesc.classList.add('hidden')
+
+    removeHiddenClass(curriculoDesc)
+    adicionaHiddenClass(candidaturasDesc)
 });
 
 
